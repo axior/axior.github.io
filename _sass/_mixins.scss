@@ -29,7 +29,7 @@ pixels = points * 96 / 72
     $pt: 12;
     @while ($pt <= 22) {
         @media screen and (min-width: $width){
-            font-size:    $size * ( $pt ) ;
+            font-size:    $size * ( $pt ) * 1px ;
             line-height:  $size * ( $pt  + 4px) ;
         }
         $pt: $pt + 1;
