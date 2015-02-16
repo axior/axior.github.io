@@ -32,7 +32,6 @@ ul > li > a{
    
     
     .navbar-brand{
-        @include X('width', 23);
         padding: 0;
         color: $text-color !important;
         
@@ -126,7 +125,13 @@ ul > li > a{
 
 
 @media screen and (min-width: 768px){
-    .navbar-fixed-top .navbar-collapse h4{
-        border-top: none;
-    }
+    .navbar-fixed-top{
+       .navbar-brand{
+           @include X('width', 23);
+       }
+
+       .navbar-collapse h4{
+            border-top: none;
+        } 
+    } 
 }
