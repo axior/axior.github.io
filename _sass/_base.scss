@@ -24,11 +24,15 @@ ul > li > a{
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
     }
-    
 
+    .menu{
+        @include X('width', 11);
+        @include X('padding-left', 1);
+    }
    
     
     .navbar-brand{
+        @include X('width', 23);
         padding: 0;
         color: $text-color !important;
         
