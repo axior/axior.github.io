@@ -1,0 +1,32 @@
+body {
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+    -ms-font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -o-font-feature-settings: "kern";
+}
+
+@font-face {
+    font-family: 'PCF';
+    src: url('#{$font-path}Medio.eot'), 
+         url('#{$font-path}Medio.ttf') format('truetype'),
+         url('#{$font-path}Medio.svg#Medio') format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'PCF';
+    src: url('#{$font-path}Grassetto.eot'), 
+         url('#{$font-path}Grassetto.ttf') format('truetype'),
+         url('#{$font-path}Grassetto.svg#Grassetto') format('svg');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'PCF';
+    src: url('#{$font-path}Leggero.eot'), 
+         url('#{$font-path}Leggero.ttf') format('truetype'),
+         url('#{$font-path}Leggero.svg#Leggero') format('svg');
+    font-weight: 300;
+}

@@ -1,0 +1,35 @@
+/* 
+Ogni 219,75px aumenta di 1pt
+La base massima è 22/26 a larghezza 2557px
+ogni px aumenta i pt di 0,004550
+L’interlinea, cioè la X = Dimensione in pt+4px 
+*/
+
+
+
+@mixin X($property, $size){
+    $max-width: 2557px;
+    $width: 359.5px;
+    $px: 12px;
+    @while ($width <= $max-width) {
+        @media screen and (min-width: $width){
+            #{$property} : $size * ( $px + 8px) ;
+        }
+        $px: $px + 1px;
+        $width: $width + 219.75px;
+    }
+}
+
+@mixin font-X($size){
+    $max-width: 2557px;
+    $width: 359.5px;
+    $px: 12px;
+    @while ($width <= $max-width) {
+        @media screen and (min-width: $width){
+            font-size: $size * ( $px + 4px) ;
+            line-height: $size * ( $px + 8px) ;
+        }
+        $px: $px + 1px;
+        $width: $width + 219.75px;
+    }
+}
