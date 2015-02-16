@@ -5,7 +5,7 @@ title: LUCA VANDRO
 description: "Luca Vandro github page"
 analytics: #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
-url: "http://lucavandro.github.io"
+url: "http://axior.github.io"
 
 # Build settings
 markdown: kramdown
