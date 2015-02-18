@@ -1,8 +1,8 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-container">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar first"></span>
         <span class="icon-bar"></span>
@@ -12,9 +12,9 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="menu">
-      <div class="row">
-        <div class="col-xs-12 col-sm-4 menu">
+    <div class="collapse navbar-collapse" id="menu-container">
+      
+        <div class="menu">
           <h4>Branding</h4>
           <ul class="list-unstyled">
            {% assign sorted_posts = (site.categories.branding | sort: 'date') %}
@@ -25,10 +25,12 @@
             {% endfor %}
           </ul>
         </div>
-        <div class="col-xs-12 col-sm-4 menu">
+        <div class="menu">
           <h4>UI/UX</h4>
           <ul class="list-unstyled">
-            {% for post in site.categories.ui %}
+            {% assign sorted_posts = (site.categories.ui | sort: 'date') %}
+            {% for post in sorted_posts %}
+
             <li>
               <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
             </li>
@@ -36,10 +38,12 @@
           </ul>
           
         </div>
-        <div class="col-xs-12 col-sm-4 menu">
+        <div class="menu">
           <h4>Miscellaneous</h4>
           <ul class="list-unstyled">
-            {% for post in site.categories.miscellanea %}
+            {% assign sorted_posts = (site.categories.miscellanea | sort: 'date') %}
+            {% for post in sorted_posts %}
+
             <li>
               <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
             </li>
@@ -47,7 +51,6 @@
           </ul>
           
         </div>
-      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

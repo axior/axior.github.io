@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "L'idea è soltanto il principio"
-date:   2015-02-15 22:50:01
-categories: miscellanea
+title:  "Reggia di Caserta"
+date:   2015-01-03 22:50:01
+categories: ui ux
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

@@ -63,6 +63,7 @@
     }
 
     var dimension = this.dimension()
+  
 
     this.$element
       .removeClass('collapse')
@@ -91,6 +92,8 @@
     this.$element
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+
+
   }
 
   Collapse.prototype.hide = function () {
