@@ -1,7 +1,9 @@
 .navbar-fixed-bottom{
-    height: 51px;
+    height: 3 * $line-height-xs;
+    &, .clearfix{
+        padding-top: $line-height-xs/2 - 5px;
+    }
     .clearfix{
-        padding-top: $line-height-xs/2;
         border-top: 1px solid #fff;
         width: 100%;
 
@@ -16,7 +18,10 @@
 
 @media screen and (min-width: 768px){
     .navbar-fixed-bottom{
-        .clearfix{ padding-top: $line-height-sm/2; }
+        height: 3 * $line-height-sm;
+        &, .clearfix{
+            padding-top: $line-height-sm/2 - 5px;
+        }
         .right{
             width: 3*160px;
         }
@@ -24,7 +29,10 @@
 }
 @media screen and (min-width: 992px){
     .navbar-fixed-bottom{
-        .clearfix{ padding-top: $line-height-md/2; }
+        height: 3 * $line-height-md;
+        &, .clearfix{
+            padding-top: $line-height-md/2 - 5px;
+        }
         .right{
             width: 3*210px;
         }        
@@ -33,7 +41,10 @@
 
 @media screen and (min-width: 1200px){
     .navbar-fixed-bottom{
-        .clearfix{ padding-top: $line-height-lg/2; }
+        height: 3 * $line-height-lg;
+        &, .clearfix{
+            padding-top: $line-height-lg/2 - 5px;
+        }
         .right{
             width: 3*220px;
         }        
@@ -43,7 +54,10 @@
 
 @media screen and (min-width: 2000px){
     .navbar-fixed-bottom{
-        .clearfix{ padding-top: $line-height-xl/2; }
+        height: 3 * $line-height-xl;
+        &, .clearfix{
+            padding-top: $line-height-xl/2 - 5px;
+        }
         .right{
             width: 3*320px;
         }        

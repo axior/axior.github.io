@@ -106,7 +106,7 @@
 
 
     .navbar-top{
-        padding-bottom: $line-height-sm/2 ;
+        padding-bottom: $line-height-sm/2 - 5px;
         .container-fluid{
             padding-right: 0;
             padding-top: $line-height-sm/2 - 5px;
@@ -149,7 +149,7 @@
 
 
     .navbar-top{
-        padding-bottom: $line-height-md/2;
+        padding-bottom: $line-height-md/2 - 5px;
         .container-fluid{
             padding-top: $line-height-md/2 - 5px;
             padding-bottom: $line-height-md/2 - 5px; 
@@ -169,7 +169,7 @@
 @media screen and (min-width: 1200px){
     
     .navbar-top{
-        padding-bottom: $line-height-lg/2;
+        padding-bottom: $line-height-lg/2 - 5px;
         .container-fluid{
             padding-top: $line-height-lg/2 - 5px;
             padding-bottom: $line-height-lg/2 - 5px; 
@@ -189,13 +189,13 @@
 @media screen and (min-width: 2000px){
     
     .navbar-top{
-        padding-bottom: $line-height-xl/2;
+        padding-bottom: $line-height-xl/2 - 5px;
         .container-fluid{
             padding-top: $line-height-xl/2 - 5px;
             padding-bottom: $line-height-xl/2 - 5px; 
             .navbar-collapse{
                 .menu{ width: 320px;}
-                height: $line-height-lg * 10 !important;
+                height: $line-height-lg * 7 !important;
             }
             &:hover{
                 .navbar-collapse{

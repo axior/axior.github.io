@@ -6,9 +6,9 @@ body{
 
 .navbar-fixed-bottom,
 body{
-    padding-top: $line-height-xs; 
-    padding-left: $line-height-xs; 
-    padding-right: $line-height-xs; 
+    padding-top: $line-height-xs - 5px; 
+    padding-left: $line-height-xs - 5px; 
+    padding-right: $line-height-xs - 5px; 
 }
 
 .navbar-fixed-bottom{
@@ -19,9 +19,9 @@ body{
 @media screen and (min-width: 768px){
     .navbar-fixed-bottom,
     body{
-        padding-top: $line-height-sm; 
-        padding-left: $line-height-sm; 
-        padding-right: $line-height-sm; 
+        padding-top: $line-height-sm - 5px; 
+        padding-left: $line-height-sm - 5px; 
+        padding-right: $line-height-sm - 5px; 
     }
 
     .navbar-fixed-bottom{
@@ -31,9 +31,9 @@ body{
 @media screen and (min-width: 992px){
     .navbar-fixed-bottom,
     body{
-        padding-top: $line-height-md; 
-        padding-left: $line-height-md; 
-        padding-right: $line-height-md; 
+        padding-top: $line-height-md - 5px; 
+        padding-left: $line-height-md - 5px; 
+        padding-right: $line-height-md - 5px; 
     }
 
     .navbar-fixed-bottom{
@@ -44,9 +44,9 @@ body{
 @media screen and (min-width: 1200px){
     .navbar-fixed-bottom,
     body{
-        padding-top: $line-height-lg; 
-        padding-left: $line-height-lg; 
-        padding-right: $line-height-lg; 
+        padding-top: $line-height-lg - 5px; 
+        padding-left: $line-height-lg - 5px; 
+        padding-right: $line-height-lg - 5px; 
     }
 
     .navbar-fixed-bottom{
@@ -57,9 +57,9 @@ body{
 @media screen and (min-width: 2000px){
     .navbar-fixed-bottom,
     body{
-        padding-top: $line-height-xl; 
-        padding-left: $line-height-xl; 
-        padding-right: $line-height-xl; 
+        padding-top: $line-height-xl - 5px; 
+        padding-left: $line-height-xl - 5px; 
+        padding-right: $line-height-xl - 5px; 
     }
 
     .navbar-fixed-bottom{
