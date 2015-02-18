@@ -6,50 +6,63 @@ body{
 
 .navbar-fixed-bottom,
 body{
-    padding-top: 17px; 
-    padding-left: 17px; 
-    padding-right: 17px; 
+    padding-top: $line-height-xs; 
+    padding-left: $line-height-xs; 
+    padding-right: $line-height-xs; 
 }
 
 .navbar-fixed-bottom{
-    padding-top: 8.5px;
+    padding-top: $line-height-xs/2;
 }
 
 
 @media screen and (min-width: 768px){
     .navbar-fixed-bottom,
     body{
-        padding-top: 18px; 
-        padding-left: 18px; 
-        padding-right: 18px; 
+        padding-top: $line-height-sm; 
+        padding-left: $line-height-sm; 
+        padding-right: $line-height-sm; 
     }
 
     .navbar-fixed-bottom{
-        padding-top: 9px;
+        padding-top: $line-height-sm/2;
     }
 }
 @media screen and (min-width: 992px){
     .navbar-fixed-bottom,
     body{
-        padding-top: 19px; 
-        padding-left: 19px; 
-        padding-right: 19px; 
+        padding-top: $line-height-md; 
+        padding-left: $line-height-md; 
+        padding-right: $line-height-md; 
     }
 
     .navbar-fixed-bottom{
-        padding-top: 9.5px;
+        padding-top: $line-height-md/2;
     }
 }
 
 @media screen and (min-width: 1200px){
     .navbar-fixed-bottom,
     body{
-        padding-top: 20px; 
-        padding-left: 20px; 
-        padding-right: 20px; 
+        padding-top: $line-height-lg; 
+        padding-left: $line-height-lg; 
+        padding-right: $line-height-lg; 
     }
 
     .navbar-fixed-bottom{
-        padding-top: 10px;
+        padding-top: $line-height-lg/2;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    .navbar-fixed-bottom,
+    body{
+        padding-top: $line-height-xl; 
+        padding-left: $line-height-xl; 
+        padding-right: $line-height-xl; 
+    }
+
+    .navbar-fixed-bottom{
+        padding-top: $line-height-lg/2;
     }
 }
