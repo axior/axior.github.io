@@ -71,16 +71,18 @@ $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 
+
+$line-height-factor: 1.1818181818;
 $font-size-xs: 12pt;
-$line-height-xs: 16pt;
+$line-height-xs: round($font-size-xs * $line-height-factor);
 $font-size-sm: 14px;
-$line-height-sm: 18px;
+$line-height-sm: round($font-size-sm * $line-height-factor);
 $font-size-md: 15px;
-$line-height-md: 18px;
+$line-height-md: round($font-size-md * $line-height-factor);
 $font-size-lg: 16px;
-$line-height-lg: 20px;
+$line-height-lg: round($font-size-lg * $line-height-factor);
 $font-size-xl: 22px;
-$line-height-xl: 26px;
+$line-height-xl: round($font-size-xl * $line-height-factor);
 
 //== Iconography
 //
