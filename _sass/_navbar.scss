@@ -138,7 +138,7 @@
             }
             &:hover{
                 .navbar-collapse{
-                    height: $line-height-sm * 10 !important;
+                    height: $line-height-sm * 10 + 5px !important;
                 }
             }
         }
@@ -159,7 +159,7 @@
             }
             &:hover{
                 .navbar-collapse{
-                    height: $line-height-md * 10 !important;
+                    height: $line-height-md * 10 + 5px !important;
                 }
             }
         }
@@ -180,7 +180,7 @@
 
             &:hover{
                 .navbar-collapse{
-                    height: $line-height-lg * 10 !important;
+                    height: $line-height-lg * 10 + 5px!important;
                 }
             }
         }
@@ -199,7 +199,7 @@
             }
             &:hover{
                 .navbar-collapse{
-                    height: $line-height-xl * 10 !important;
+                    height: $line-height-xl * 10 + 5px!important;
                 }
             }
         }
