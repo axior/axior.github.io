@@ -15,19 +15,26 @@
 
   var Carousel = function (element, options) {
     this.$element    = $(element)
-    this.$indicators = this.$element.find('.carousel-indicators')
+    this.$items      = this.$element.find('.item')
+    this.$indicators = this.createIndicators()
+    this.$active     = this.$element.find('.item.active')
+    this.$caption    = this.$element.find('.carousel-caption-control')
+    this.$counter    = this.$element.find('.carousel-counter')
     this.options     = options
     this.paused      =
     this.sliding     =
-    this.interval    =
-    this.$active     =
-    this.$items      = null
+    this.interval    = null
+
+    this.$indicators.prependTo(this.$element)
+
+    this.setCaption(this.$active.data('caption'));
 
     this.options.keyboard && this.$element.on('keydown.bs.carousel', $.proxy(this.keydown, this))
 
     this.options.pause == 'hover' && !('ontouchstart' in document.documentElement) && this.$element
       .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
       .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
+      .on('slid.bs.carousel', $.proxy(this.onSlide, this))
   }
 
   Carousel.VERSION  = '3.3.2'
@@ -39,6 +46,38 @@
     pause: 'hover',
     wrap: true,
     keyboard: true
+  }
+
+  Carousel.prototype.onSlide = function(e){
+    var $target = $(e.relatedTarget)
+    this.setCaption($target.data('caption'))
+    this.updateCounter();
+  }
+
+  Carousel.prototype.setCaption = function(text){
+     this.$caption.text(text)
+  }
+
+  Carousel.prototype.updateCounter = function(){
+    this.$counter.text( '' + '/' +  '' )
+  }
+
+  Carousel.prototype.createIndicators = function(){
+    var $indicators = $('<ol>').addClass('carousel-indicators');
+    var that = this;
+
+    this.$items.each(function(index, element){
+       $('<li>')
+        .data('slide-to', index.toString())
+        .data('target', '#'+ that.$element.attr('id'))
+        .addClass(index == 0 ? 'active' : '')
+        .click(function(){
+           that.to(index);
+        })
+        .appendTo($indicators);
+    });
+
+    return $indicators;
   }
 
   Carousel.prototype.keydown = function (e) {
@@ -202,30 +241,6 @@
   }
 
 
-  // CAROUSEL DATA-API
-  // =================
-
-  var clickHandler = function (e) {
-    var href
-    var $this   = $(this)
-    var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
-    if (!$target.hasClass('carousel')) return
-    var options = $.extend({}, $target.data(), $this.data())
-    var slideIndex = $this.attr('data-slide-to')
-    if (slideIndex) options.interval = false
-
-    Plugin.call($target, options)
-
-    if (slideIndex) {
-      $target.data('bs.carousel').to(slideIndex)
-    }
-
-    e.preventDefault()
-  }
-
-  $(document)
-    .on('click.bs.carousel.data-api', '[data-slide]', clickHandler)
-    .on('click.bs.carousel.data-api', '[data-slide-to]', clickHandler)
 
   $(window).on('load', function () {
     $('[data-ride="carousel"]').each(function () {
