@@ -195,11 +195,11 @@
             padding-bottom: $line-height-xl/2 - 5px; 
             .navbar-collapse{
                 .menu{ width: 320px;}
-                height: $line-height-lg * 7 !important;
+                height: $line-height-xl * 7 !important;
             }
             &:hover{
                 .navbar-collapse{
-                    height: $line-height-lg * 10 !important;
+                    height: $line-height-xl * 10 !important;
                 }
             }
         }
