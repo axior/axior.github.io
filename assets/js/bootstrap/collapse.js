@@ -83,6 +83,9 @@
       this.transitioning = 0
       this.$element
         .trigger('shown.bs.collapse')
+
+      var menuHeight =  $('.navbar-fixed-bottom').offset().top - this.$element.offset().top
+      this.$element.css({ 'max-height': menuHeight });
     }
 
     if (!$.support.transition) return complete.call(this)

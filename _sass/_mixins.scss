@@ -1,38 +1,28 @@
-/* 
-Ogni 219,75px aumenta di 1pt
-La base massima è 22/26 a larghezza 2557px
-ogni px aumenta i pt di 0,004550
-L’interlinea, cioè la X = Dimensione in pt+4px 
+$prefix-list: webkit moz ms o; 
 
-points = pixels * 72 / 96
-pixels = points * 96 / 72
-*/
-
-
-
-@mixin X($property, $size){
-    $max-width: 2557px;
-    $width: 359.5px;
-    $pt: 12;
-    @while ($pt <= 22) {
-        @media screen and (min-width: $width){
-            #{$property} : $size * ( $pt  + 4px) ;
-        }
-        $pt: $pt + 1;
-        $width: $width + 219.75px;
+@mixin prefix( $property, $value ){
+    #{$property} : $value;
+    @each $prefix in $prefix-list{
+        -#{$prefix}-#{$property} : $value;
     }
 }
 
-@mixin font-X($size){
-    $max-width: 2557px;
-    $width: 359.5px;
-    $pt: 12;
-    @while ($pt <= 22) {
-        @media screen and (min-width: $width){
-            font-size:    $size * ( $pt ) * 1px ;
-            line-height:  $size * ( $pt  + 4px) ;
-        }
-        $pt: $pt + 1;
-        $width: $width + 219.75px;
-    }
+@mixin columns($value){
+    @include prefix('columns', $value);
+}
+
+@mixin column-gap($value){
+    @include prefix('column-gap', $value);
+}
+
+@mixin transform($value){
+    @include prefix('transform', $value);
+}
+
+@mixin transform-origin($value){
+    @include prefix('transform-origin', $value);
+}
+
+@mixin transition($value){
+    @include prefix('transition', $value);
 }

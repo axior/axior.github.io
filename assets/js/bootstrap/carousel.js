@@ -18,8 +18,8 @@
     this.$items      = this.$element.find('.item')
     this.$indicators = this.createIndicators()
     this.$active     = this.$element.find('.item.active')
-    this.$caption    = this.$element.find('.carousel-caption-control')
-    this.$counter    = this.$element.find('.carousel-counter')
+    this.$caption    = $('.carousel-caption-control')
+    this.$counter    = $('.carousel-counter')
     this.options     = options
     this.paused      =
     this.sliding     =
@@ -27,14 +27,26 @@
 
     this.$indicators.prependTo(this.$element)
 
-    this.setCaption(this.$active.data('caption'));
+    this.setCaption(this.$active.data('caption'))
+    this.updateCounter(this.$active)
 
-    this.options.keyboard && this.$element.on('keydown.bs.carousel', $.proxy(this.keydown, this))
+    
 
     this.options.pause == 'hover' && !('ontouchstart' in document.documentElement) && this.$element
       .on('mouseenter.bs.carousel', $.proxy(this.pause, this))
-      .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
-      .on('slid.bs.carousel', $.proxy(this.onSlide, this))
+      .on('mouseleave.bs.carousel', $.proxy(this.cycle, this));
+
+    this.$element
+      .on('slide.bs.carousel', $.proxy(this.onSlide, this))
+      .on('slid.bs.carousel', $.proxy(this.onSlid, this))
+      .on('swipeleft',$.proxy(this.prev, this))
+      .on('swiperight',$.proxy(this.next, this));
+
+    if(this.options.keyboard)
+      $(window).keydown($.proxy(this.keydown, this))
+
+    $("[data-slide='next']").click($.proxy(this.next, this))
+    $("[data-slide='prev']").click($.proxy(this.prev, this))
   }
 
   Carousel.VERSION  = '3.3.2'
@@ -42,24 +54,47 @@
   Carousel.TRANSITION_DURATION = 600
 
   Carousel.DEFAULTS = {
-    interval: 5000,
+    interval: false,
     pause: 'hover',
     wrap: true,
-    keyboard: true
+    keyboard: true,
+    counterTimeout: 2000
+
   }
 
   Carousel.prototype.onSlide = function(e){
     var $target = $(e.relatedTarget)
     this.setCaption($target.data('caption'))
-    this.updateCounter();
+    this.updateCounter($target);
+    this.showBigCounter();
+  }
+
+  Carousel.prototype.onSlid = function(e){
+  }
+
+  Carousel.prototype.showBigCounter = function(){
+    if(this.carouselCounterIsShowing){
+      clearTimeout(this.carouselCounterTimeout);
+    }else{
+      $('.carousel-counter.bigger').fadeIn();
+      this.carouselCounterIsShowing = true;
+    }
+    this.carouselCounterTimeout = setTimeout($.proxy(this.hideBigCounter, this), this.options.counterTimeout);
+    
+  }
+
+  Carousel.prototype.hideBigCounter = function(){
+    $('.carousel-counter.bigger').fadeOut();
+    this.carouselCounterIsShowing = false;
   }
 
   Carousel.prototype.setCaption = function(text){
      this.$caption.text(text)
   }
 
-  Carousel.prototype.updateCounter = function(){
-    this.$counter.text( '' + '/' +  '' )
+  Carousel.prototype.updateCounter = function($target){
+    var counter = this.getItemIndex($target) + 1; 
+    this.$counter.text( counter.toString() + '/' +  this.$items.length.toString() )
   }
 
   Carousel.prototype.createIndicators = function(){

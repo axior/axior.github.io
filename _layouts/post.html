@@ -5,32 +5,17 @@
 
   <body>
 
-    {% include header.html %}
+    {% include post_header.html %}
 
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-      {{content}}
-      
-
-      <!-- Controls -->
-      <div class="carousel-footer">
-          <div class="carousel-caption-control"></div>
-          <div class="carousel-controls">
-              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <span class="carousel-counter"></span>
-              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-          </div>
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        {{content}}
       </div>
-      
-    </div>
-    
 
+    </div>
+    <div class="carousel-counter bigger" style="display: none;"></div>
+    {% include post_footer.html %}
 
   </body>
 

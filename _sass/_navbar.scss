@@ -1,5 +1,38 @@
 .navbar-top{
     
+    &.post{
+        .navbar-collapse{
+            border-top: 1px solid #fff;
+            padding-top: $line-height-xs / 2 ;
+            font-weight: 200;
+        }
+
+        .navbar-toggle,
+        .navbar-brand{
+            height: $line-height-xs * 3;
+            overflow-y: hidden;
+            width: 50%;
+
+            &.collapsed{
+                .toggle{ display: none; }
+                .teaser{ display: block; }
+            }
+
+            .teaser{ 
+                display: none; 
+                font-weight: 200;
+                height: $line-height-xs * 3;
+            }
+            .toggle{ 
+                display: block; 
+                float: right;
+            }
+            
+        }
+
+        
+    }
+    
     margin-bottom: 0;
     .container-fluid{
         padding-top: $line-height-xs/2 - 5px;
@@ -12,7 +45,7 @@
     .navbar-brand{
         padding: 0;
         color: $text-color !important;
-        
+        height: $line-height-xs * 3;
     }
 
     .navbar-brand,
@@ -34,7 +67,8 @@
         }
 
         &.collapse.in{
-            max-height: 350px;
+            max-height: none;
+            overflow-y: scroll;
         }
     }
 
@@ -47,31 +81,21 @@
             background: #000;
             margin-top: 0px;
             margin-right: -8px;
+            padding-top: 2px;
         }
         .icon-bar{
             opacity: 0;
-            -webkit-transition: all 300ms ease-in-out;
-            -moz-transition: all 300ms ease-in-out;
-            -ms-transition: all 300ms ease-in-out;
-            -o-transition: all 300ms ease-in-out;
-            transition: all 300ms ease-in-out
+            @include transform-origin(right);
+            @include transition(all 300ms ease-in-out); 
         }
         .icon-bar.first{
             opacity: 1;
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            transform: rotate(45deg);
+            @include transform( rotate(-45deg) );
         }
 
         .icon-bar.last{
             opacity: 1;
-            -webkit-transform: translateY(-12px) rotate(-45deg);
-            -moz-transform: translateY(-12px) rotate(-45deg);
-            -ms-transform: translateY(-12px) rotate(-45deg);
-            -o-transform: translateY(-12px) rotate(-45deg);
-            transform: translateY(-12px) rotate(-45deg);
+            @include transform(translateY(4px) rotate(45deg));
         }
 
         &.collapsed{
@@ -80,20 +104,12 @@
             }
             .icon-bar.first{
                 opacity: 1;
-                -webkit-transform: rotate(0deg);
-                -moz-transform: rotate(0deg);
-                -ms-transform: rotate(0deg);
-                -o-transform: rotate(0deg);
-                transform: rotate(0deg);
+                @include transform(rotate(0deg));
             }
 
             .icon-bar.last{
                 opacity: 1;
-                -webkit-transform: translateY(0px) rotate(0deg);
-                -moz-transform: translateY(0px) rotate(0deg);
-                -ms-transform: translateY(0px) rotate(0deg);
-                -o-transform: translateY(0px) rotate(0deg);
-                transform: translateY(0px) rotate(0deg);
+                @include transform(translateY(0px) rotate(0deg)) ;
             }
         }
     }
@@ -106,17 +122,34 @@
 
 
     .navbar-top{
+        &.post{
+            .container-fluid{
+                .navbar-brand{
+                    width: auto;
+                }
+                .navbar-collapse{
+                    width: 75%;
+                    border-top: none;
+                    padding-top: 0;
+                    @include columns(3);
+                    @include column-gap($line-height-sm);
+                }
+
+                &:hover{
+                    .navbar-collapse{
+                        height: $line-height-sm * $navbar-closed-rows !important;
+                    }
+                }
+            }
+        }
         padding-bottom: $line-height-sm/2 - 5px;
         .container-fluid{
             padding-right: 0;
             padding-top: $line-height-sm/2 - 5px;
             padding-bottom: $line-height-sm/2 - 5px; 
             .navbar-collapse{
-                -webkit-transition: all 300ms ease;
-                -moz-transition: all 300ms ease;
-                -ms-transition: all 300ms ease;
-                -o-transition: all 300ms ease;
-                transition: all 300ms ease;
+                
+                @include transition(all 300ms ease);
                 height: $line-height-sm * $navbar-closed-rows !important;
                 overflow: hidden !important;
                 float: right;
@@ -138,7 +171,7 @@
             }
             &:hover{
                 .navbar-collapse{
-                    height: $line-height-sm * 11 + 5px !important;
+                    height: $line-height-sm * $navbar-opened-rows + 5px !important;
                 }
             }
         }
@@ -149,6 +182,18 @@
 
 
     .navbar-top{
+        &.post{
+            .container-fluid{
+                .navbar-collapse{
+                    @include column-gap($line-height-md); 
+                }
+                &:hover{
+                    .navbar-collapse{
+                        height: $line-height-md * $navbar-closed-rows !important;
+                    }
+                }
+            }
+        }
         padding-bottom: $line-height-md/2 - 5px;
         .container-fluid{
             padding-top: $line-height-md/2 - 5px;
@@ -169,6 +214,18 @@
 @media screen and (min-width: 1200px){
     
     .navbar-top{
+        &.post{
+            .container-fluid{
+                .navbar-collapse{
+                    @include column-gap($line-height-lg); 
+                }
+                &:hover{
+                    .navbar-collapse{
+                        height: $line-height-lg * $navbar-closed-rows !important;
+                    }
+                }
+            }
+        }
         padding-bottom: $line-height-lg/2 - 5px;
         .container-fluid{
             padding-top: $line-height-lg/2 - 5px;
@@ -189,6 +246,20 @@
 @media screen and (min-width: 2000px){
     
     .navbar-top{
+        &.post{
+            .container-fluid{
+                .navbar-collapse{
+                    @include column-gap($line-height-xl); 
+                }
+                .navbar-collapse{
+                    &:hover{
+                        .navbar-collapse{
+                            height: $line-height-xl * $navbar-closed-rows !important;
+                        }
+                    }
+                }
+            }
+        }
         padding-bottom: $line-height-xl/2 - 5px;
         .container-fluid{
             padding-top: $line-height-xl/2 - 5px;
