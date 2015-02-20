@@ -1,25 +1,27 @@
 .navbar-fixed-bottom{
     height: 3 * $line-height-xs + 5px;
-    &, .clearfix{
+    font-weight: 200;
+    &, .clearfix, .row{
         padding-top: $line-height-xs/2 - 5px;
     }
-    .clearfix{
+    .clearfix, .row{
         border-top: 1px solid #fff;
         width: 100%;
 
-
+        .col-sm-3,
+        .col-xs-6{ padding: 0; }
     }        
-    div{ float: left;}
+    
     .right{
         float: right;
         width: 198px;
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: $screen-sm-min){
     .navbar-fixed-bottom{
         height: 3 * $line-height-sm + 5px;
-        &, .clearfix{
+        &, .clearfix, .row{
             padding-top: $line-height-sm/2 - 5px;
         }
         .right{
@@ -27,10 +29,10 @@
         }
     }
 }
-@media screen and (min-width: 992px){
+@media screen and (min-width: $screen-md-min){
     .navbar-fixed-bottom{
         height: 3 * $line-height-md + 5px;
-        &, .clearfix{
+        &, .clearfix, .row{
             padding-top: $line-height-md/2 - 5px;
         }
         .right{
@@ -39,10 +41,10 @@
     }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: $screen-lg-min){
     .navbar-fixed-bottom{
         height: 3 * $line-height-lg + 5px;
-        &, .clearfix{
+        &, .clearfix, .row{
             padding-top: $line-height-lg/2 - 5px;
         }
         .right{
@@ -55,7 +57,7 @@
 @media screen and (min-width: 2000px){
     .navbar-fixed-bottom{
         height: 3 * $line-height-xl + 5px;
-        &, .clearfix{
+        &, .clearfix, .row{
             padding-top: $line-height-xl/2 - 5px;
         }
         .right{

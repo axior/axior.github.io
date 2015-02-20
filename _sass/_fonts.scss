@@ -35,7 +35,7 @@ h4{
     font-family: $font-family-sans-serif;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: $screen-sm-min){
     body,
     .navbar-brand,
     ul > li > a,
@@ -45,7 +45,7 @@ h4{
     }
 
 }
-@media screen and (min-width: 992px){
+@media screen and (min-width: $screen-md-min){
     body,
     .navbar-brand,
     ul > li > a,
@@ -57,7 +57,7 @@ h4{
    
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: $screen-lg-min){
     body,
     .navbar-brand,
     ul > li > a,

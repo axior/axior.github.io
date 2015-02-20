@@ -44,3 +44,12 @@ $navbar-closed-rows:      7;
 $navbar-opened-rows:      10;    
 $navbar-row-width:        11;        
 
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+
+$screen-xl-min:          2000px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-lg-max:              ($screen-xl-min - 1) !default;

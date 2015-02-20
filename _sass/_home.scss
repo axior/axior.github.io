@@ -5,18 +5,18 @@
     background-size: cover;
     background-position-x: 50%;
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: $screen-sm-min){
     .home{
         background-image: url(../assets/img/sm/RenderCanonico.jpg);
     }
 }
-@media screen and (min-width: 992px){
+@media screen and (min-width: $screen-md-min){
     .home{
         background-image: url(../assets/img/md/RenderCanonico.jpg);
     }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: $screen-lg-min){
     .home{
         background-image: url(../assets/img/lg/RenderCanonico.jpg);
     }
