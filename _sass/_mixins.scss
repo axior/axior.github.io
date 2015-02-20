@@ -1,10 +1,10 @@
 $prefix-list: webkit moz ms o; 
 
 @mixin prefix( $property, $value ){
-    #{$property} : $value;
     @each $prefix in $prefix-list{
         -#{$prefix}-#{$property} : $value;
     }
+    #{$property} : $value;
 }
 
 @mixin columns($value){
@@ -25,4 +25,8 @@ $prefix-list: webkit moz ms o;
 
 @mixin transition($value){
     @include prefix('transition', $value);
+}
+
+@mixin hyphens($value){
+    @include prefix('hyphens', $value);
 }

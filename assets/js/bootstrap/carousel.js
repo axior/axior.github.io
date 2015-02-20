@@ -29,7 +29,7 @@
 
     this.setCaption(this.$active.data('caption'))
     this.updateCounter(this.$active)
-
+    this.stretch()
     
 
     this.options.pause == 'hover' && !('ontouchstart' in document.documentElement) && this.$element
@@ -45,13 +45,16 @@
     if(this.options.keyboard)
       $(window).keydown($.proxy(this.keydown, this))
 
+    $(window).resize($.proxy(this.stretch, this));
     $("[data-slide='next']").click($.proxy(this.next, this))
     $("[data-slide='prev']").click($.proxy(this.prev, this))
+
+    $(window).on('mousewheel',$.proxy(this.onMouseWheel, this));
   }
 
   Carousel.VERSION  = '3.3.2'
 
-  Carousel.TRANSITION_DURATION = 600
+  Carousel.TRANSITION_DURATION = 700
 
   Carousel.DEFAULTS = {
     interval: false,
@@ -60,6 +63,25 @@
     keyboard: true,
     counterTimeout: 2000
 
+  }
+  Carousel.prototype.removeVerticalAnimation = function(){
+    this.$element.find('.carousel-inner').removeClass('vertical-animation');
+  }
+  Carousel.prototype.onMouseWheel = function(ev){ 
+      var e = ev.originalEvent;
+      var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+      this.verticalSlide( delta == 1 ? 'prev' : 'next' );
+  }
+
+  Carousel.prototype.verticalSlide = function(type){
+      this.$element.find('.carousel-inner').addClass('vertical-animation');
+      type == 'prev' ? this.prev() : this.next();
+      setTimeout($.proxy(this.removeVerticalAnimation, this),Carousel.TRANSITION_DURATION );
+  }
+
+  Carousel.prototype.stretch = function(){
+    var height = $('.navbar-fixed-bottom').offset().top - this.$element.offset().top;
+    this.$element.height(height);
   }
 
   Carousel.prototype.onSlide = function(e){
@@ -119,7 +141,9 @@
     if (/input|textarea/i.test(e.target.tagName)) return
     switch (e.which) {
       case 37: this.prev(); break
+      case 38: this.verticalSlide('prev'); break
       case 39: this.next(); break
+      case 40: this.verticalSlide('next'); break
       default: return
     }
 
