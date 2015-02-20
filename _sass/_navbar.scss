@@ -238,7 +238,7 @@
 
             &:hover{
                 .navbar-collapse{
-                    height: $line-height-lg * $navbar-opened-rows !important;
+                    height: $line-height-lg * $navbar-opened-rows + 5px !important;
                 }
             }
         }
@@ -271,7 +271,7 @@
             }
             &:hover{
                 .navbar-collapse{
-                    height: $line-height-xl * $navbar-opened-rows !important;
+                    height: $line-height-xl * $navbar-opened-rows + 5px !important;
                 }
             }
         }
