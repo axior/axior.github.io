@@ -25,7 +25,7 @@
     this.sliding     =
     this.interval    = null
 
-    this.$indicators.prependTo(this.$element)
+    this.$indicators.prependTo($('.indicators-container'))
 
     this.setCaption(this.$active.data('caption'), true)
     this.updateCounter(this.$active)

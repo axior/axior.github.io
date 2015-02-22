@@ -55,5 +55,95 @@
         -ms-flex-align: end;
             align-items: flex-end;
 
-    > div { width: 100%; }
+    > div { width: 100%;}
+}
+
+.flex-align-center{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+
+    > div { width: 100%;}
+}
+
+.gray-bg{
+    background: rgb(192,192,192);
+}
+
+
+.mac-container{
+    position: relative;
+    /* General */
+    &,.mac-frame{
+        margin: auto !important;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../img/mac-frame.png');
+        z-index: 1000;
+
+        /* xs specific */
+        width: 325px !important;
+        height: 275px;
+
+    }
+    .mac-frame, iframe{ position: absolute;}
+
+    
+    
+    iframe{
+        left: 8px;
+        top: 26px;
+        width: 308px;
+        height: 159px;
+    }
+
+}
+
+@media screen and (min-width: $screen-sm-min){
+    
+}
+@media screen and (min-width: $screen-md-min){
+    
+}
+
+@media screen and (min-width: $screen-lg-min){
+
+
+}
+
+@media screen and (min-width: 2000px){
+    
+
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.bg-center{
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100%;
+}
+
+.border-right{
+    border-right: 2px solid black;
+}
+.border-left{
+    border-left: 2px solid black;
+    
+}
+.border-top{
+    border-top: 4px solid black;
+}
+.border-bottom{
+    border-bottom: 4px solid black;
 }

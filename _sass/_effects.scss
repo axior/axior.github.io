@@ -1,43 +1,8 @@
-@mixin moveToBottomFade {
-    -webkit-animation: moveToBottomFade .7s ease both;
-    animation: moveToBottomFade .7s ease both;
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;filter: alpha(opacity=0);}
+  100% {opacity: 1;filter: alpha(opacity=100);}
 }
-
-@mixin moveFromTopFade {
-    -webkit-animation: moveFromTopFade .7s ease both;
-    animation: moveFromTopFade .7s ease both;
+@keyframes fadeIn {
+  0% {opacity: 0;filter: alpha(opacity=0);}
+  100% {opacity: 1;filter: alpha(opacity=100);}
 }
-
-@-webkit-keyframes moveToTopFade {
-    from { }
-    to { opacity: 0.3; -webkit-transform: translateY(-100%); }
-}
-@keyframes moveToTopFade {
-    from { }
-    to { opacity: 0.3; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
-}
-
-@-webkit-keyframes moveFromTopFade {
-    from { opacity: 0.3; -webkit-transform: translateY(-100%); }
-}
-@keyframes moveFromTopFade {
-    from { opacity: 0.3; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
-}
-
-@-webkit-keyframes moveToBottomFade {
-    from { }
-    to { opacity: 0.3; -webkit-transform: translateY(100%); }
-}
-@keyframes moveToBottomFade {
-    from { }
-    to { opacity: 0.3; -webkit-transform: translateY(100%); transform: translateY(100%); }
-}
-
-@-webkit-keyframes moveFromBottomFade {
-    from { opacity: 0.3; -webkit-transform: translateY(100%); }
-}
-@keyframes moveFromBottomFade {
-    from { opacity: 0.3; -webkit-transform: translateY(100%); transform: translateY(100%); }
-}
-
-

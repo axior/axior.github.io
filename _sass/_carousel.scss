@@ -19,7 +19,11 @@
 }
 
 .carousel-indicators{
-    display: none;
+    position: static;
+    margin: 0;
+    left: auto;
+    width: 100%;
+    text-align: left;
 }
 .carousel-counter{
     text-align: center;
@@ -52,6 +56,7 @@
             height: 100%;
             img, div {  padding: 0; }
             div {  margin: 0; }
+            img { max-width: 100%; }
             @include transition(.7s ease left);
 
             // WebKit CSS3 transforms for supported devices
@@ -73,32 +78,32 @@
               &.next.left,
               &.prev.right,
               &.active {
+                @include animation(fadeIn 2s both);
                 opacity: 1;
                 left: 0;
               }
             }
-        }
-      &.vertical-animation{
-          > .item {
-            // WebKit CSS3 transforms for supported devices
-            @media all and (transform-3d), (-webkit-transform-3d) {
+            @media all and (min-width: $screen-sm-min) and (transform-3d), (-webkit-transform-3d) {
 
               &.next,
               &.active.right {
                 @include translate3d(0, 100%, 0);
               }
+
               &.prev,
               &.active.left {
                 @include translate3d(0,-100%, 0);
               }
+              
               &.next.left,
               &.prev.right,
               &.active {
                 @include translate3d(0, 0, 0);
               }
             }
-          }
-      }  
+        }
+     
+
     }
 }
 
