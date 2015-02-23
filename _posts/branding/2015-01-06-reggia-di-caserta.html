@@ -29,12 +29,12 @@ captions:
       </div>
   </div>
 </div>
-<div class="item"  data-caption="3">
+<div class="item fadeOut"  data-caption="3">
     <div class="flex-align-bottom full-height">
         <img src="{{ "/img/branding/reggia-caserta/logotipo.png" | prepend: site.baseurl }}" alt="...">
     </div>
 </div>
-<div class="item"  data-caption="4">
+<div class="item fadeIn"  data-caption="4">
   <div class="flex-align-bottom full-height">
         <img src="{{ "/img/branding/reggia-caserta/costruzionelogotipo.png" | prepend: site.baseurl }}" alt="...">
     </div>
@@ -81,7 +81,7 @@ captions:
     <div class="bg-center col-xs-12" style="background-image: url({{ "/img/branding/reggia-caserta/poster-color.jpg" | prepend: site.baseurl }});"></div>
 </div>
 <div class="item gray-bg">
-    <div class="flex-align-center">
+    <div class="full-height flex-align-center">
         <div class="mac-container">
             <div class="mac-frame"></div>
               <iframe src="https://www.youtube.com/embed/mP-FjS_k1nI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
@@ -104,12 +104,12 @@ captions:
 <div class="item" data-caption="13">
   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gS9Q4uGoXl8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
-<div class="item gray-bg">
+<div class="item gray-bg fadeOut">
     <div class="bg-center col-xs-12" style="background-image: url({{ "/img/branding/reggia-caserta/didascalie.png" | prepend: site.baseurl }});"></div>
-</div><div class="item gray-bg">
+</div><div class="item gray-bg fadeIn">
     <div class="bg-center col-xs-12" style="background-image: url({{ "/img/branding/reggia-caserta/didascalienumeri.png" | prepend: site.baseurl }});"></div>
 </div>
-<div class="item" data-caption="Didascalie attuali">
+<div class="item fadeOut" data-caption="Didascalie attuali">
   <div class="clearfix full-height">
       <div class="col-sm-3"></div>
       <div class="col-sm-3 flex-align-bottom full-height"
@@ -120,7 +120,7 @@ captions:
       <div class="col-sm-3"></div>
   </div>
 </div>
-<div class="item" data-caption="Didascalie attuali problemi">
+<div class="item fadeIn" data-caption="Didascalie attuali problemi">
   <div class="clearfix full-height">
       <div class="col-sm-3"></div>
       <div class="col-sm-3 flex-align-bottom full-height"
@@ -163,6 +163,53 @@ captions:
     data-toggle="modal" data-target="#indicazioni-2"  
     style="background-image: url({{ "/img/branding/reggia-caserta/indicazioni2.jpg" | prepend: site.baseurl }});"></div>
 </div>
+<div class="item">
+    <div class="bg-bottom-left col-sm-6 border-right"
+    data-toggle="modal" data-target="#orari-chiusura1" 
+    style="background-image: url({{ "/img/branding/reggia-caserta/orari-chiusura-thumb.jpg" | prepend: site.baseurl }});"></div>
+    <div class="split-view col-sm-6 border-left">
+        <div class="bg-center border-bottom"
+            data-toggle="modal" data-target="#orari-chiusura2"  
+            style="background-image: url({{ "/img/branding/reggia-caserta/orari-chiusura2.jpg" | prepend: site.baseurl }});">
+        </div>
+        <div class="bg-center border-top"
+            data-toggle="modal" data-target="#orari-chiusura3"  
+            style="background-image: url({{ "/img/branding/reggia-caserta/orari-chiusura3.jpg" | prepend: site.baseurl }});">
+        </div>
+    </div>
+</div>
+<div class="item">
+    <div class="bg-bottom-left col-sm-6 border-right"
+    data-toggle="modal" data-target="#sala-trono1" 
+    style="background-image: url({{ "/img/branding/reggia-caserta/sala-trono-thumb.jpg" | prepend: site.baseurl }});"></div>
+    <div class="bg-center col-sm-6 border-left"
+    data-toggle="modal" data-target="#sala-trono2"  
+    style="background-image: url({{ "/img/branding/reggia-caserta/sala-trono2.jpg" | prepend: site.baseurl }});"></div>
+</div>
+<div class="item">
+    <div class="bg-bottom-left col-sm-6 border-right"
+    data-toggle="modal" data-target="#giuseppe-cammarano1" 
+    style="background-image: url({{ "/img/branding/reggia-caserta/giuseppe-cammarano-thumb.jpg" | prepend: site.baseurl }});"></div>
+    <div class="bg-center col-sm-6 border-left"
+    data-toggle="modal" data-target="#giuseppe-cammarano2"  
+    style="background-image: url({{ "/img/branding/reggia-caserta/giuseppe-cammarano2.jpg" | prepend: site.baseurl }});"></div>
+</div>
+<div class="item">
+    <div class="bg-center col-xs-12" 
+    data-toggle="modal" data-target="#stanza" 
+    style="background-image: url({{ "/img/branding/reggia-caserta/stanza.jpg" | prepend: site.baseurl }});"></div>
+</div>
+<div class="item">
+    <div class="bg-bottom-left col-sm-6 border-right"
+    data-toggle="modal" data-target="#albero1" 
+    style="background-image: url({{ "/img/branding/reggia-caserta/albero-thumb.jpg" | prepend: site.baseurl }});"></div>
+    <div class="bg-center col-sm-6 border-left"
+    data-toggle="modal" data-target="#albero2"  
+    style="background-image: url({{ "/img/branding/reggia-caserta/albero2.jpg" | prepend: site.baseurl }});"></div>
+</div>
+<div class="item" data-caption="13">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gS9Q4uGoXl8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 {% include modal.html type="portrait" url="/img/branding/reggia-caserta/1.jpg" id="one" %}
 {% include modal.html type="portrait" url="/img/branding/reggia-caserta/2.jpg" id="two" %}
@@ -184,3 +231,19 @@ captions:
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/mappa-giardini2.jpg" id="mappa-giardini2" %}
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/indicazioni1.png" id="indicazioni1" %}
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/indicazioni2.jpg" id="indicazioni2" %}
+{% include modal.html type="portrait" url="/img/branding/reggia-caserta/orari-chiusura1.jpg" id="orari-chiusura1" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/orari-chiusura2.jpg" id="orari-chiusura2" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/orari-chiusura3.jpg" id="orari-chiusura3" %}
+{% include modal.html type="portrait" url="/img/branding/reggia-caserta/giuseppe-cammarano1.png" id="giuseppe-cammarano1" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/giuseppe-cammarano2.jpg" id="giuseppe-cammarano2" %}
+{% include modal.html type="portrait" url="/img/branding/reggia-caserta/sala-trono1.png" id="sala-trono1" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/sala-trono2.jpg" id="sala-trono2" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/stanza.jpg" id="stanza" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/albero1.jpg" id="albero1" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/albero2.jpg" id="albero2" %}
+
+<script type="text/javascript">
+/*    $(window).load(function(){
+        alert('Ready to go');
+    })*/
+</script>

@@ -31,7 +31,7 @@
         -ms-flex-align: center;
             align-items: center;
 
-    > div { width: 100%; height: 100%; }
+    > div { width: 100%;  }
 }
 .full-height{ height: 100%;}
 .full-width{ width: 100%;}
@@ -49,11 +49,6 @@
     /* General */
     &,.mac-frame{
         margin: auto !important;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url('../img/mac-frame.png');
-        z-index: 1000;
 
         /* xs specific */
         width: 325px !important;
@@ -62,7 +57,13 @@
     }
     .mac-frame, iframe{ position: absolute;}
 
-    
+    .mac-frame{
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../img/mac-frame.png');
+        z-index: 1000;
+    }
     
     iframe{
         left: 8px;
