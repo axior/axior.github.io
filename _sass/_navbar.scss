@@ -247,6 +247,7 @@
         }
     }
 }
+
 @media screen and (min-width: 2000px){
     
     .navbar-top{
@@ -255,13 +256,13 @@
                 .navbar-collapse{
                     @include column-gap($line-height-xl); 
                 }
-                .navbar-collapse{
-                    &:hover{
-                        .navbar-collapse{
-                            height: $line-height-xl * $navbar-closed-rows !important;
-                        }
+               
+                &:hover{
+                    .navbar-collapse{
+                        height: $line-height-xl * $navbar-closed-rows !important;
                     }
                 }
+               
             }
         }
         padding-bottom: $line-height-xl/2 - 5px;

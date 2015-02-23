@@ -34,6 +34,10 @@
        width: 9px;
       height: 9px;
     }
+
+    .duplicate{
+      margin-left: -9px;
+    }
 }
 .carousel-counter{
     text-align: center;
@@ -48,6 +52,7 @@
         font-size: $font-size-xs * 5;
         line-height: 0.90;
         font-weight: bold;
+        letter-spacing: -0.07em;
     }
 }
 
