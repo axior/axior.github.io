@@ -24,6 +24,16 @@
     left: auto;
     width: 100%;
     text-align: left;
+
+    li{
+      width: 8px;
+      height: 8px;
+    }
+
+    .active{
+       width: 9px;
+      height: 9px;
+    }
 }
 .carousel-counter{
     text-align: center;
@@ -83,7 +93,7 @@
                 left: 0;
               }
             }
-            @media all and (min-width: $screen-sm-min) and (transform-3d), (-webkit-transform-3d) {
+            @media screen and (min-width: $screen-sm-min) and (transform-3d), (-webkit-transform-3d) {
 
               &.next,
               &.active.right {

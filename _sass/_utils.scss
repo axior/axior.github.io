@@ -1,43 +1,4 @@
-//Image XS
 
-.img-xs{ display: inline-block; }
-.img-sm{ display: none; }
-.img-md{ display: none; }
-.img-lg{ display: none; }
-.img-xl{ display: none; }
-
-
-@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
-    .img-xs{ display: none; }
-    .img-sm{ display: inline-block; }
-    .img-md{ display: none; }
-    .img-lg{ display: none; }
-    .img-xl{ display: none; }
-}
-
-@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max){
-    .img-xs{ display: none; }
-    .img-sm{ display: none; }
-    .img-md{ display: inline-block; }
-    .img-lg{ display: none; }
-    .img-xl{ display: none; }
-}
-
-@media screen and (min-width: $screen-lg-min) and (max-width: $screen-lg-max){
-    .img-xs{ display: none; }
-    .img-sm{ display: none; }
-    .img-md{ display: none; }
-    .img-lg{ display: inline-block; }
-    .img-xl{ display: none; }
-}
-
-@media screen and (min-width: $screen-xl-min){
-    .img-xs{ display: none; }
-    .img-sm{ display: none; }
-    .img-md{ display: none; }
-    .img-lg{ display: none; }
-    .img-xl{ display: inline-block; }
-}
 
 .no-padding{
     padding: 0 !important;
@@ -55,7 +16,7 @@
         -ms-flex-align: end;
             align-items: flex-end;
 
-    > div { width: 100%;}
+    > div { width: 100%; height: 100%;}
 }
 
 .flex-align-center{
@@ -70,9 +31,14 @@
         -ms-flex-align: center;
             align-items: center;
 
-    > div { width: 100%;}
+    > div { width: 100%; height: 100%; }
 }
-
+.full-height{ height: 100%;}
+.full-width{ width: 100%;}
+.thumb{
+    max-width: 98% !important;
+    max-height: 60%;
+}
 .gray-bg{
     background: rgb(192,192,192);
 }
@@ -133,17 +99,31 @@
     background-position: 50% 50%;
     height: 100%;
 }
+.bg-bottom-left{
+    background-size: cover;
+    background-position: 0% 100%;
+    height: 100%;
+}
 
 .border-right{
-    border-right: 2px solid black;
+    border-right: 2px solid transparent;
+    background-clip: content-box;
 }
 .border-left{
-    border-left: 2px solid black;
+    border-left: 2px solid transparent;
+    background-clip: content-box;
     
 }
 .border-top{
-    border-top: 4px solid black;
+    border-top: 2px solid transparent;
+    background-clip: content-box;
 }
 .border-bottom{
-    border-bottom: 4px solid black;
+    border-bottom: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.split-view{
+    height: 100%;
+    > div{ height: 50%; background-clip: content-box;}
 }
