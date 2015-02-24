@@ -27,6 +27,7 @@
 
     this.$indicators.prependTo($('.indicators-container'))
 
+    this.updateHeader(this.$active);
     this.setCaption(this.$active.data('caption'), true)
     this.updateCounter(this.$active)
     this.stretch()
@@ -72,6 +73,13 @@
 
   }
 
+  Carousel.prototype.updateHeader = function($element){
+    var html = $element.find('header').html();
+
+    $('.navbar-collapse .clearfix').fadeOut(300, function(){
+        $('.navbar-collapse .clearfix').html(html).fadeIn(300);
+    });
+  }
 
   Carousel.prototype.removeVerticalAnimation = function(){
     this.$element.find('.carousel-inner').removeClass('vertical-animation');
@@ -107,6 +115,7 @@
     this.updateCounter($target);
     this.showBigCounter();
     this.updateHash($target);
+    this.updateHeader($target);
   }
 
   Carousel.prototype.onSlid = function(e){

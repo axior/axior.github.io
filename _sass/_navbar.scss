@@ -133,9 +133,9 @@
                     width: 75%;
                     border-top: none;
                     padding-top: 0;
-                    @include columns(3);
-                    @include hyphens(auto);
-                    @include column-gap($line-height-sm);
+                    [class^='col-']{
+                        padding: 0;
+                    }
                 }
 
                 &:hover{

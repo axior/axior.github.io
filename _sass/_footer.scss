@@ -12,7 +12,7 @@
         .col-xs-6{ padding: 0; }
     }        
     
-    .right{
+    .pull-right{
         float: right;
         width: 198px;
     }
@@ -24,7 +24,7 @@
         &, .clearfix, .row{
             padding-top: $line-height-sm/2 - 5px;
         }
-        .right{
+        .pull-right{
             width: $line-height-sm * $navbar-row-width * 3;
         }
     }
@@ -35,7 +35,7 @@
         &, .clearfix, .row{
             padding-top: $line-height-md/2 - 5px;
         }
-        .right{
+        .pull-right{
             width: $line-height-md * $navbar-row-width * 3;
         }        
     }
@@ -47,7 +47,7 @@
         &, .clearfix, .row{
             padding-top: $line-height-lg/2 - 5px;
         }
-        .right{
+        .pull-right{
             width: $line-height-lg * $navbar-row-width * 3;
         }        
     }
@@ -60,7 +60,7 @@
         &, .clearfix, .row{
             padding-top: $line-height-xl/2 - 5px;
         }
-        .right{
+        .pull-right{
             width: $line-height-xl * $navbar-row-width * 3;
         }        
     }
