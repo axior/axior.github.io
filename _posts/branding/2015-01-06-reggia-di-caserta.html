@@ -88,16 +88,23 @@ categories: branding
             </div>
         </div>
   </header>
-  <div class="clearfix full-height" data-toggle="modal" data-target="#planimetria-parco">
-      <div class="col-sm-3 flex-align-bottom full-height">
+  <div class="clearfix full-height">
+      <div class="col-sm-3 flex-align-bottom full-height"
+           data-toggle="modal" data-target="#planimetria-parco">
           <img class="thumb" src="{{ "/img/branding/reggia-caserta/planimetria-parco.jpg" | prepend: site.baseurl }}" />
       </div>
       <div class="col-sm-6 flex-align-bottom full-height">
-          <img class="base thumb" src="{{ "/img/branding/reggia-caserta/costruzionemarchio3.png" | prepend: site.baseurl }}" />
-          <img class="overlay thumb" src="{{ "/img/branding/reggia-caserta/costruzionemarchio1.png" | prepend: site.baseurl }}" />
+          <img class="base thumb" 
+          data-toggle="modal" data-target="#costruzionemarchio3"
+          src="{{ "/img/branding/reggia-caserta/costruzionemarchio3.png" | prepend: site.baseurl }}" />
+          <img class="overlay thumb"
+               data-toggle="modal" data-target="#costruzionemarchio1" 
+               src="{{ "/img/branding/reggia-caserta/costruzionemarchio1.png" | prepend: site.baseurl }}" />
       </div>
       <div class="col-sm-3 flex-align-bottom full-height">
-          <img class="overlay thumb" src="{{ "/img/branding/reggia-caserta/costruzionemarchio2.png" | prepend: site.baseurl }}" />
+          <img class="overlay thumb" 
+            data-toggle="modal" data-target="#costruzionemarchio2"
+            src="{{ "/img/branding/reggia-caserta/costruzionemarchio2.png" | prepend: site.baseurl }}" />
       </div>
   </div>
 </div>
@@ -130,7 +137,9 @@ categories: branding
             The poster campaign shows different and magnificent views of the Palace, without revealing its identity, if not in the small website link placed in the bottom. Viewers will link the posters together but will not immedately relate them to the Palace, curiosity builds attention, attention brings visitors.
         </div>
     </header>
-    <div class="bg-center col-xs-12" style="background-image: url({{ "/img/branding/reggia-caserta/poster-color.jpg" | prepend: site.baseurl }});"></div>
+    <div class="bg-center col-xs-12" 
+         data-toggle="modal" data-target="#poster-color"  
+    style="background-image: url({{ "/img/branding/reggia-caserta/poster-color.jpg" | prepend: site.baseurl }});"></div>
 </div>
 <div class="item gray-bg" data-slide-count="9" data-caption='Website'>
     <header>
@@ -226,7 +235,9 @@ categories: branding
         </div>
     </header>
     <div class="flex-align-bottom full-height col-xs-12">
-        <img src="{{ "/img/branding/reggia-caserta/monzu_logo.jpg" | prepend: site.baseurl }}" />
+        <img 
+            data-toggle="modal" data-target="#monzu-logo" 
+        src="{{ "/img/branding/reggia-caserta/monzu_logo.jpg" | prepend: site.baseurl }}" />
     </div>
 </div>
 <div class="item" data-slide-count="13.5" data-caption="Monzù">
@@ -281,12 +292,20 @@ categories: branding
           <img src="{{ "/img/branding/reggia-caserta/didascalie-attuali.png" | prepend: site.baseurl }}" />
       </div>
       <div class="col-sm-4 flex-align-bottom full-height">
-          <img class="thumb base" src="{{ "/img/branding/reggia-caserta/signal.png" | prepend: site.baseurl }}" />
-          <img class="thumb overlay" src="{{ "/img/branding/reggia-caserta/signal-alt.png" | prepend: site.baseurl }}" />
+          <img class="thumb base" 
+          data-toggle="modal" data-target="#signal"
+          src="{{ "/img/branding/reggia-caserta/signal.png" | prepend: site.baseurl }}" />
+          <img class="thumb overlay" 
+          data-toggle="modal" data-target="#signal-alt"
+          src="{{ "/img/branding/reggia-caserta/signal-alt.png" | prepend: site.baseurl }}" />
       </div>
       <div class="col-sm-5 flex-align-bottom full-height">
-          <img class="thumb base" src="{{ "/img/branding/reggia-caserta/arrow.png" | prepend: site.baseurl }}" />
-          <img class="thumb overlay" src="{{ "/img/branding/reggia-caserta/arrow-alt.png" | prepend: site.baseurl }}" />
+          <img class="thumb base" 
+          data-toggle="modal" data-target="#arrow"
+          src="{{ "/img/branding/reggia-caserta/arrow.png" | prepend: site.baseurl }}" />
+          <img class="thumb overlay"
+          data-toggle="modal" data-target="#arrow-alt"
+           src="{{ "/img/branding/reggia-caserta/arrow-alt.png" | prepend: site.baseurl }}" />
       </div>
   </div>
 </div>
@@ -425,6 +444,7 @@ categories: branding
 {% include modal.html type="portrait" url="/img/branding/reggia-caserta/planimetria-parco.jpg" id="planimetria-parco" %}
 {% include modal.html type="portrait" url="/img/branding/reggia-caserta/costruzionemarchio1.png" id="costruzionemarchio1" %}
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/costruzionemarchio2.png" id="costruzionemarchio2" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/marchio-reggia.png" id="costruzionemarchio3" %}
 {% include modal.html type="portrait" url="/img/branding/reggia-caserta/poster.png" id="poster" %}
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/nasone-double-poster.jpg" id="nasone-double-poster" %}
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/poster-nasone.jpg" id="poster-nasone" %}
@@ -454,6 +474,12 @@ categories: branding
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/francesco-II.jpg" id="francesco-II" %}
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/pomodoro.jpg" id="pomodoro" %}
 {% include modal.html type="landscape" url="/img/branding/reggia-caserta/monzu1.jpg" id="monzu1" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/monzu_logo.jpg" id="monzu-logo" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/poster-color.jpg" id="poster-color" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/signal.png" id="signal" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/signal-alt.png" id="signal-alt" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/arrow.png" id="arrow" %}
+{% include modal.html type="landscape" url="/img/branding/reggia-caserta/arrow-alt.png" id="arrow-alt" %}
 
 <script type="text/javascript">
 /*    $(window).load(function(){
