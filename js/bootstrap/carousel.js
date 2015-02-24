@@ -20,6 +20,7 @@
     this.$active     = this.$element.find('.item.active')
     this.$caption    = $('.carousel-caption-control')
     this.$counter    = $('.carousel-counter')
+    this.lastMouseWheel = new Date()
     this.options     = options
     this.paused      =
     this.sliding     =
@@ -87,8 +88,13 @@
   
   Carousel.prototype.onMouseWheel = function(ev){ 
       var e = ev.originalEvent;
-      var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-      this.verticalSlide( delta == 1 ? 'prev' : 'next' );
+      e.preventDefault();
+      if( (new Date() - this.lastMouseWheel) > 500 ){
+        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+        this.verticalSlide( delta == 1 ? 'prev' : 'next' );
+        this.lastMouseWheel = new Date()
+      }
+
   }  
   Carousel.prototype.syncHash = function(ev){ 
       var index = parseInt(window.location.hash.slice(1)) -1;
@@ -156,8 +162,7 @@
   }
 
   Carousel.prototype.updateCounter = function($target){
-    var counter = this.getItemIndex($target) + 1; 
-    this.$counter.text( counter.toString() + '/' +  this.$items.length.toString() )
+    this.$counter.text( $target.data('slide-count') + '/' +  this.$items.last().data('slide-count') )
   }
 
   Carousel.prototype.createIndicators = function(){
