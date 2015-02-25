@@ -2,7 +2,18 @@
     
     &.post{
         .navbar-collapse{
-            border-top: 1px solid #fff;
+            @media screen and (max-width: 768px){
+                margin: 0;
+                margin-right: -15px;
+                [class^='col-']{
+                    padding: 0;
+                }
+                .clearfix{
+                    border-top: 1px solid white;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+            }
             padding-top: $line-height-xs / 2 ;
             font-weight: 200;
         }
