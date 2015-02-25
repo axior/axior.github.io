@@ -48,6 +48,7 @@
       $(window).keydown($.proxy(this.keydown, this))
 
     $(window).resize($.proxy(this.stretch, this));
+    setInterval($.proxy(this.stretch, this), 500);
     $("[data-slide='next']").click($.proxy(this.next, this))
     $("[data-slide='prev']").click($.proxy(this.prev, this))
 
@@ -125,7 +126,12 @@
   }
 
   Carousel.prototype.onSlid = function(e){
-    
+    var $target = $(e.relatedTarget);
+    if($target.data('auto-details')){
+      setTimeout(function(){
+        $(".navbar-collapse [data-toggle='details']").click();
+      }, 1500);
+    }
   }
   Carousel.prototype.updateHash = function($target){
     var index = this.getItemIndex($target) + 1; 

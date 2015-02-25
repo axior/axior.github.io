@@ -18,3 +18,37 @@
 .overlay{
     display: none;
 }
+.transparent{
+    color: transparent !important;
+}
+
+.columns-2-xs{
+    @include columns(2);
+    height: 100%;
+}
+
+@media screen and (min-width: $screen-sm-min){
+    .columns-2-sm{
+        @include columns(2);
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: $screen-md-min){
+    .columns-2-md{
+        @include columns(2);
+        height: 100%;
+    }
+}
+@media screen and (min-width: $screen-lg-min){
+    .columns-2-lg{
+        @include columns(2);
+        height: 100%;
+    }
+}
+@media screen and (min-width: $screen-xl-min){
+    .columns-2-xl{
+        @include columns(2);
+        height: 100%;
+    }
+}

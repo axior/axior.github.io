@@ -47,6 +47,11 @@
         width: 325px !important;
         height: 275px;
 
+        @media screen and (min-width: $screen-xl-min){
+            width: 2 * 325px !important;
+            height: 2 * 275px;
+        }
+
     }
     .mac-frame, iframe{ position: absolute;}
 
@@ -55,7 +60,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-image: url('../img/mac-frame.png');
-        z-index: 1000;
+       
     }
     
     iframe{
@@ -63,6 +68,13 @@
         top: 26px;
         width: 308px;
         height: 159px;
+
+        @media screen and (min-width: $screen-xl-min){
+            left: 2 * 8px;
+            top: 2 * 26px;
+            width: 2 * 308px;
+            height: 2 * 159px;
+        }
     }
 
 }

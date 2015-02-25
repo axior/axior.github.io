@@ -64,8 +64,8 @@ categories: branding
         </div>
     </header>
     <div class="flex-align-bottom full-height">
-        <img class="base" src="{{ "/img/branding/reggia-caserta/logotipo.png" | prepend: site.baseurl }}" alt="...">
-        <img class="overlay" src="{{ "/img/branding/reggia-caserta/costruzionelogotipo.png" | prepend: site.baseurl }}" alt="..." style="display:none;">
+        <img class="base" src="{{ "/img/branding/reggia-caserta/logotipo.png" | prepend: site.baseurl }}" alt="..." style="min-width: 100%;">
+        <img class="overlay" src="{{ "/img/branding/reggia-caserta/costruzionelogotipo.png" | prepend: site.baseurl }}" alt="..." style="display:none;min-width: 100%;">
     </div>
 </div>
 <div class="item" data-caption="Pictogram" data-slide-count="5" id="pictogram">
@@ -114,7 +114,7 @@ categories: branding
 
 <div class="item" data-slide-count="6" data-caption="Colors">
     <header>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             Colours scheme needed to communicate the mysterious and ancient elegance of such an opulent and magnificent place, black and gold perfect fitted the needs.
         </div>
     </header>
@@ -128,7 +128,7 @@ categories: branding
 
 <div class="item" data-caption="Video ADV" data-slide-count="7">
     <header>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             What makes the Royal Palace of Caserta unique and recognizable? The Royal Palace of Caserta itself, his ambitious project, its architectural harmony: hence the strategy of simply showing it as much as possible, in its more intimate beauty; in every place, in airports and subway stations as well.
         </div>
     </header>
@@ -136,7 +136,7 @@ categories: branding
 </div>
 <div class="item" data-caption="Posters" data-slide-count="8">
     <header>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             The poster campaign shows different and magnificent views of the Palace, without revealing its identity, if not in the small website link placed in the bottom. Viewers will link the posters together but will not immedately relate them to the Palace, curiosity builds attention, attention brings visitors.
         </div>
     </header>
@@ -146,7 +146,7 @@ categories: branding
 </div>
 <div class="item gray-bg" data-slide-count="9" data-caption='Website'>
     <header>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             The website follows the entire communication strategy settings by using html and css gimmicks and allowing digital tours, reservations for events to be held inside and outside the palace, also favoring the local economy.
         </div>
     </header>   
@@ -159,11 +159,15 @@ categories: branding
 </div>
 <div class="item" data-slide-count="10" data-caption="Re Nasone">
     <header>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             The “Marie Antoinette” movie has made a huge increase in visitors to Versailles, this phenomenon is replicable for Caserta: Ferdinand IV became king at the age of eight, his story is full of luxury, lust and violence, he led wars that have dramatically changed the political balance of his era, in addition, he was also famous for his big nose.
         </div>
     </header>
-    <div class="bg-center col-sm-6 border-right hidden-xs" 
+    <div class="bg-center col-sm-6 border-right visible-sm hidden-md hidden-lg" 
+        data-toggle="modal" data-target="#nasone-double-poster" 
+        style="background-image: url({{ "/img/branding/reggia-caserta/nasone-double-poster-sm.jpg" | prepend: site.baseurl }});">
+    </div>
+    <div class="bg-center col-sm-6 border-right hidden-xs hidden-sm" 
         data-toggle="modal" data-target="#nasone-double-poster" 
         style="background-image: url({{ "/img/branding/reggia-caserta/nasone-double-poster.jpg" | prepend: site.baseurl }});">
     </div>
@@ -174,7 +178,7 @@ categories: branding
 </div>
 <div class="item" data-slide-count="11" data-caption="Entrance">
     <header>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             Here the graphics are more aggressive towards the palace, but for a good reason: those who visit the Palace does not enter into the unattended rooms owned by a dead king, but in a place maintained by reputable custodians, with which they sign an actual contract. This configuration also facilitates the entrance: Tickets to the left, wardrobe to the right, entry in the center.
         </div>
     </header>
@@ -184,14 +188,14 @@ categories: branding
 </div>
 <div class="item" data-caption="Tablet App" data-slide-count="12">
   <header>
-    <div class="col-sm-3">
+    <div class="col-sm-4">
       Along with the ticket is given a tablet, it lists and show the visitable places, facilitating consultation by appropriately notifying while entering a room. It provides digital interactions and a GPS-linked map that can let you follow a relevant path, for example, a movie-related one, or guide you to current events with great ease.
     </div>
   </header>
   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gS9Q4uGoXl8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="item" data-caption="Culinary heritage" data-slide-count="13" id="culinary-heritage">
+<div class="item" data-caption="Culinary heritage" data-slide-count="13" data-auto-details="true" id="culinary-heritage">
   <header>
     <div class="col-sm-4">
       Because of the passion for pasta of King Francis II, also known as King Lasagna, we have the introduction of the fork tines to four in- stead of two. It’s in the kitchens of the Royal Palace which was im- ported for the first time in Europe a very important element of what is today known as Italian cuisine: the tomato.
@@ -199,7 +203,7 @@ categories: branding
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
             <div class="base">
-                <a class="gold" data-target="#culinary-heritage" data-toggle="details">Click to see details</a>
+                <a class="transparent" data-target="#culinary-heritage" data-toggle="details">Click to see details</a>
             </div>
             <div class="overlay">
                 <div>Font: Bodoni Roman</div> 
@@ -233,7 +237,7 @@ categories: branding
 
 <div class="item" data-slide-count="13.5" data-caption="Monzù">
     <header>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             The name of the restaurant is therefore a tribute to the great men who cooked in that building, those cooks were not called “cooks” or “chef”, but a ‘neapolitanization’ of “Monsieur le chef”: Monzù.
         </div>
     </header>
@@ -256,7 +260,7 @@ categories: branding
              style="background-image: url({{ "/img/branding/reggia-caserta/monzu1.jpg" | prepend: site.baseurl }});"></div>
 </div>
 
-<div class="item gray-bg" data-slide-count="14" data-caption="Information graphics" id="information-graphics">
+<div class="item gray-bg" data-slide-count="14" data-auto-details="true" data-caption="Information graphics" id="information-graphics">
     <header>
         <div class="col-sm-4">
                 Information graphics are designed to be easily consulted by an individual to an average height of one meter and seventy-five, divided into three areas: gardens, courtyards and rooms.
@@ -264,7 +268,7 @@ categories: branding
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <div class="base">
-                <a class="gold" data-target="#information-graphics" data-toggle="details">Click to see details</a>
+                <a class="transparent" data-target="#information-graphics" data-toggle="details">Click to see details</a>
             </div>
         </div>
     </header>
@@ -272,7 +276,7 @@ categories: branding
     <div class="bg-center col-xs-12 overlay" style="background-image: url({{ "/img/branding/reggia-caserta/didascalienumeri.png" | prepend: site.baseurl }});"></div>
 </div>
 
-<div class="item" data-caption="Current situation" data-slide-count="15" id="current-situation">
+<div class="item" data-caption="Current situation" data-auto-details="true" data-slide-count="15" id="current-situation">
     <header>
         <div class="col-sm-4">
                 The graphic compartment was ineffective in identifying informations about locations and works, the supports accumulated dirt easily and there were no optical graphics corrections. These problems were solved by redesigning information strategy to its foundations.
@@ -280,7 +284,7 @@ categories: branding
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
             <div class="base">
-                <a class="gold" data-target="#current-situation" data-toggle="details">Click to see details</a>
+                <a class="transparent" data-target="#current-situation" data-toggle="details">Click to see details</a>
             </div>
             <div class="overlay">
                 <div>1: Map is too detailed to be effective.</div>
@@ -292,7 +296,8 @@ categories: branding
    <div class="clearfix full-height">
       <div class="col-sm-3 flex-align-bottom full-height"
            data-toggle="modal" data-target="#didascalie-attuali" >
-          <img src="{{ "/img/branding/reggia-caserta/didascalie-attuali.png" | prepend: site.baseurl }}" />
+          <img class="thumb base" src="{{ "/img/branding/reggia-caserta/didascalie-attuali.png" | prepend: site.baseurl }}" />
+          <img class="thumb overlay" src="{{ "/img/branding/reggia-caserta/didascalie-attuali-problemi.png" | prepend: site.baseurl }}" />
       </div>
       <div class="col-sm-4 flex-align-bottom full-height">
           <img class="thumb base" 
