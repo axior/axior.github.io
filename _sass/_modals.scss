@@ -13,9 +13,13 @@
 .modal-dialog{
     margin: 0;
     width: 100%;
-    &, .modal-content, .modal-body{
-        background-color: $body-bg;
+    background-color: rgba(51, 51, 51, 0.9);
+    height: 100%;
+    .modal-content, .modal-body{
+        background-color: transparent;
         height: 100%;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
     }
 
     .modal-body{
@@ -27,7 +31,6 @@
     .modal-content{
         border: none;
         border-radius: 0;
-        border-top: 1px solid white;
 
         .close{
             text-shadow: none;
