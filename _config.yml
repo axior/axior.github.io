@@ -5,7 +5,7 @@ title: Paolo Caracciolo
 description: "Designer"
 analytics: #Google analytics code in the format XX-nnnnnnnn-n
 baseurl: "" #important: start with /
-url: "http://axior.github.io"
+url: "http://www.paolocaracciolo.com"
 
 # Build settings
 markdown: kramdown
