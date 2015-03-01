@@ -46,7 +46,7 @@
 
     &.bigger{
         position: fixed;
-        bottom: 3 * $line-height-xs;
+        top: 8 * $line-height-xs;
         width: 50%;
         text-align: left;
         font-size: $font-size-xs * 8;
@@ -55,7 +55,7 @@
         }
         line-height: 0.90;
         font-weight: bold;
-        letter-spacing: -0.07em;
+        letter-spacing: -0.06em;
     }
 }
 
@@ -168,7 +168,7 @@
         &.bigger{
             font-size: $font-size-sm * 10;
             line-height: 0.90;
-            bottom: 3 * $line-height-sm;
+            top: 8 * $line-height-sm;
         }
     }
 }
@@ -177,7 +177,7 @@
         &.bigger{
             font-size: $font-size-md * 15;
             line-height: 0.90;
-            bottom: 3 * $line-height-md;
+            top: 8 * $line-height-md;
         }
     }
 }
@@ -187,7 +187,7 @@
         &.bigger{
             font-size: $font-size-lg * 15;
             line-height: 0.90;
-            bottom: 3 * $line-height-lg;
+            top: 8 * $line-height-lg;
         }
     }
 
@@ -198,7 +198,7 @@
         &.bigger{
             font-size: $font-size-xl * 15;
             line-height: 0.90;
-            bottom: 3 * $line-height-xl;
+            top: 8 * $line-height-xl;
         }
     }  
 

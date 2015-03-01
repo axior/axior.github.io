@@ -47,8 +47,8 @@
     if(this.options.keyboard)
       $(window).keydown($.proxy(this.keydown, this))
 
-    $(window).resize($.proxy(this.stretch, this));
-    setInterval($.proxy(this.stretch, this), 500);
+    $(window).resize($.proxy(this.onResize, this));
+    setInterval($.proxy(this.onResize, this), 500);
     $("[data-slide='next']").click($.proxy(this.next, this))
     $("[data-slide='prev']").click($.proxy(this.prev, this))
 
@@ -97,6 +97,15 @@
       }
 
   }  
+
+  Carousel.prototype.onResize = function(ev){ 
+      this.stretch();
+      $('.carousel-counter.bigger').css({
+        top: $('.carousel-inner').offset().top
+      })
+
+  }  
+
   Carousel.prototype.syncHash = function(ev){ 
       var index = parseInt(window.location.hash.slice(1)) -1;
       if( index && index != this.getItemIndex() )
