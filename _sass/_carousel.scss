@@ -77,6 +77,10 @@
             div {  margin: 0; }
             img { max-width: 100%; }
             @include transition(.7s ease left);
+            &.noFade{
+              opacity: 1 !important;
+              @include translate3d(0, 0, 0);
+            }
             &.fadeIn{
               @include transition(.7s ease-in-out);
               // WebKit CSS3 transforms for supported devices
