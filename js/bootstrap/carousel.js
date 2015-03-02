@@ -122,7 +122,7 @@
   Carousel.prototype.stretch = function(){
     var height = $('.navbar-fixed-bottom').offset().top - this.$element.offset().top;
     this.$element.height(height);
-    this.$element.find('.carousel-inner').height(height);
+    this.$element.find('.carousel-inner, .fit-height').height(height);
   }
 
   Carousel.prototype.onSlide = function(e){

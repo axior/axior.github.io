@@ -90,6 +90,22 @@
     height: 100%;
 }
 
+.bg-bottom-right{
+    background-size: cover;
+    background-position: 100% 100%;
+    height: 100%;
+}
+
+.slide-overlay{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    img{
+        margin: auto;
+        height: 100%;
+    }
+}
+
 .border-right{
     border-right: round(($line-height-xs/2 - 5px)/2) solid transparent;
     @media screen and (min-width: $screen-sm-min){
